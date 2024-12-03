@@ -1,0 +1,24 @@
+@use 'breakpoints' as *;
+@use 'layout' as *;
+@use 'colors' as *;
+
+#main-wrapper {
+  padding-inline: $container-padding;
+  padding-top: 40px;
+}
+
+.page-wrapper {
+  background-color: $background;
+  color: $foreground;
+  margin: 0 auto;
+
+  @include at-least-wide {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+
+}
+
+.page-content h3 {
+  @include horizontal-spacing;
+}

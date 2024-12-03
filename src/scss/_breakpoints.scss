@@ -1,0 +1,14 @@
+// _breakpoints.scss
+$break-wide: 960.1px;
+
+@mixin at-least-wide {
+  @media (min-width: #{$break-wide}) {
+    @content;
+  }
+}
+
+@mixin less-than-wide {
+  @media (max-width: #{$break-wide - 0.1px}) {
+    @content;
+  }
+}

@@ -1,0 +1,75 @@
+@use 'breakpoints' as *;
+@use 'colors' as *;
+
+header {
+
+  @include at-least-wide {
+    margin: 0 auto;
+    max-width: 800px;
+  }
+}
+
+.site-header__inner {
+  @include at-least-wide {
+    background-color: $background-contrast;
+    color: $foreground-contrast;
+  }
+}
+
+.site-slogan {
+  font-family: Inter, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  max-width: calc(100% - 130px);
+  display: block;
+  margin-left: 10px;
+}
+
+.site-branding__inner {
+  align-items: start;
+  display: flex;
+
+  @include at-least-wide {
+    display: flex;
+  }
+}
+
+.site-branding__logo {
+  background-color: $background;
+  width: auto;
+  height: 70px;
+
+  @include at-least-wide {
+    flex-basis: 18%;
+  }
+}
+
+.site-branding__logo img {
+  max-width: 100%;
+  height: 100%;
+  max-height: unset;
+}
+
+#block-tropics-branding {
+  background: url('../assets/images/banner-example.png') no-repeat top right $background-contrast;
+  background-size: contain;
+  font-size: 12px;
+  height: 180px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: end;
+  padding: 10px;
+
+  @include at-least-wide {
+    background: url('../assets/images/banner-example.png') no-repeat bottom right $background-contrast;
+  }
+  color: $foreground-contrast;
+}
+
+.brand__organization {
+  color: $accent-contrast;
+  font-family: "Montserrat", sans-serif;
+  margin-block-end: 0;
+}
+

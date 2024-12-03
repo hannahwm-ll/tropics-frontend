@@ -1,0 +1,22 @@
+@use 'breakpoints' as *;
+
+$layout--content: 800px;
+$layout--extra-extra-narrow: 480px;
+$layout--extra-narrow: 600px;
+$layout--narrow-size: 782px;
+$layout--wide: 1080px;
+$layout--extra-wide: 1280px;
+$layout--ultra-wide: 1440px;
+$layout--full-width: 100vw;
+
+// Default horizontal spacing
+$spacing-horizontal: 16px;
+$container-padding: 1.125rem;
+
+@mixin horizontal-spacing {
+  margin-top: $spacing-horizontal;
+
+  @include at-least-wide {
+    margin-top: 32px;
+  }
+}
